@@ -3,131 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkinPicker - Dominez la Draft, Synchronisez vos Skins</title>
-    <meta name="description" content="Le compagnon League of Legends pour randomiser vos skins, synchroniser votre lobby et gérer votre addiction. Open-source et gratuit.">
+    <title>SkinPicker - Companion App</title>
+    <meta name="description" content="SkinPicker : Le compagnon ultime pour League of Legends. Randomizer, Sync Lobby et plus.">
     
-    <!-- Fonts: Inter & Cinzel for that Hextech feel -->
+    <!-- Fonts: Inter Only -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Icons: RemixIcon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
     
-    <!-- Favicon placeholder -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
 </head>
 <body>
 
-    <div class="background-overlay"></div>
+    <!-- Floating Mascots -->
+    <div class="mascot mascot-lulu">
+        <img src="mascots/LuluHome.png" alt="Lulu Mascot">
+    </div>
+    <div class="mascot mascot-meep">
+        <img src="mascots/Meep3.png" alt="Meep Mascot">
+    </div>
+    <div class="mascot mascot-poro">
+        <img src="mascots/Poro4.png" alt="Poro Mascot">
+    </div>
 
-    <main class="bento-container">
+    <!-- Main Container -->
+    <main class="main-container">
         
-        <!-- 1. HERO SECTION (Large Card) -->
-        <section class="glass-panel hero-section">
-            <header>
-                <div class="logo-area">
-                    <i class="ri-gamepad-line hextech-icon"></i>
-                    <span class="logo-text">SkinPicker</span>
-                </div>
-                <!-- Socials small integrated -->
-                <div class="header-socials">
-                    <a href="#" target="_blank" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-                    <a href="#" target="_blank" aria-label="Discord"><i class="ri-discord-fill"></i></a>
-                </div>
-            </header>
-            
+        <!-- Header / Hero -->
+        <header class="hero-section glass-card">
             <div class="hero-content">
-                <h1>Dominez la Draft.<br><span class="text-gold">Synchronisez vos Skins.</span></h1>
-                <p class="hero-subtitle">Le randomizer intelligent pour LoL. Open-source, gratuit, et conçu pour jouer entre amis.</p>
+                <div class="badge">Open Source & Free</div>
+                <h1>SkinPicker</h1>
+                <p class="subtitle">Votre compagnon de draft intelligent. Synchronisez vos skins, gérez votre collection.</p>
                 
-                <div class="cta-wrapper">
-                    <a href="https://github.com/nano315/lol-skin-picker/releases/latest" id="download-btn" class="primary-btn">
-                        <i class="ri-windows-fill"></i> 
-                        <span class="btn-text">
-                            Télécharger pour Windows
-                            <small id="version-tag" class="version-text">Recherche version...</small>
-                        </span>
+                <div class="cta-group">
+                    <a href="#" id="download-btn" class="btn-primary">
+                        <i class="ri-download-cloud-2-fill"></i>
+                        <span>Télécharger pour Windows <small id="version-tag">...</small></span>
                     </a>
-                    <p class="trust-microcopy">
-                        <i class="ri-shield-check-line"></i> Open Source | 100% Safe
-                    </p>
+                    <a href="https://github.com/nano315/lol-skin-picker" target="_blank" class="btn-secondary">
+                        <i class="ri-github-fill"></i> GitHub
+                    </a>
                 </div>
+            </div>
+        </header>
+
+        <!-- SmartScreen Installation Guide -->
+        <section class="install-section glass-card">
+            <div class="section-header">
+                <h2><i class="ri-shield-keyhole-line"></i> Installation & Confiance</h2>
+                <p>Windows Defender (SmartScreen) peut afficher une alerte car l'application n'est pas "signée" (ce certificat coûte cher). Voici comment procéder en toute sécurité.</p>
             </div>
             
-            <div class="hero-visual">
-                <!-- Placeholder for App Screenshot -->
-                <div class="image-placeholder app-preview">
-                    <span>Aperçu de l'Application</span>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <p>Au lancement, cliquez sur <strong>"Informations complémentaires"</strong>.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <p>Un nouveau bouton apparaît. Cliquez sur <strong>"Exécuter quand même"</strong>.</p>
+                </div>
+                <div class="step-card highlight">
+                    <div class="step-num">03</div>
+                    <p>C'est tout ! L'application est open-source et sûre.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 2. TRUST / INSTALLATION SECTION (Medium Card) -->
-        <section class="glass-panel trust-section" id="install-guide">
-            <div class="card-header">
-                <h2><i class="ri-alert-line text-gold"></i> Windows vous alerte ?</h2>
-                <p>Pas de panique. SkinPicker est open-source mais nous n'avons pas acheté le certificat onéreux de Microsoft.</p>
+        <!-- Features Grid -->
+        <section class="features-grid">
+            <div class="glass-card feature-item">
+                <i class="ri-shuffle-fill feature-icon"></i>
+                <h3>Smart Randomizer</h3>
+                <p>Sélectionne aléatoirement un skin parmi ceux que vous possédez.</p>
             </div>
-            
-            <div class="install-steps">
-                <div class="step">
-                    <div class="step-icon"><i class="ri-download-cloud-2-line"></i></div>
-                    <p>1. Téléchargez</p>
-                </div>
-                <div class="arrow"><i class="ri-arrow-right-s-line"></i></div>
-                <div class="step">
-                    <div class="step-icon alert-icon"><i class="ri-error-warning-fill"></i></div>
-                    <p>2. "Info Complé..."</p>
-                </div>
-                <div class="arrow"><i class="ri-arrow-right-s-line"></i></div>
-                <div class="step">
-                    <div class="step-icon success-icon"><i class="ri-check-double-line"></i></div>
-                    <p>3. "Exécuter"</p>
-                </div>
+            <div class="glass-card feature-item">
+                <i class="ri-group-2-fill feature-icon"></i>
+                <h3>Sync Lobby</h3>
+                <p>Synchronisez votre thème de skin avec vos amis en temps réel.</p>
             </div>
-            
-            <a href="https://github.com/nano315/lol-skin-picker" target="_blank" class="text-link">→ Vérifier le code source sur GitHub</a>
-        </section>
-
-        <!-- 3. FEATURE: RANDOMIZER (Small Card) -->
-        <section class="glass-panel feature-card">
-            <div class="feature-icon"><i class="ri-shuffle-line"></i></div>
-            <h3>Smart Randomizer</h3>
-            <p>Fini l'hésitation. Laissez le destin choisir parmi vos skins possédés.</p>
-        </section>
-
-        <!-- 4. FEATURE: SYNC LOBBY (Small Card) -->
-        <section class="glass-panel feature-card">
-            <div class="feature-icon"><i class="ri-group-line"></i></div>
-            <h3>Sync Lobby</h3>
-            <p>Coordonnez vos thèmes avec vos amis dans un lobby privé.</p>
-        </section>
-
-        <!-- 5. FEATURE: ANTI-ADDICTION (Small Card) -->
-        <section class="glass-panel feature-card">
-            <div class="feature-icon"><i class="ri-timer-flash-line"></i></div>
-            <h3>Contrôle</h3>
-            <p>Gérez votre temps de jeu et suivez votre difficulté.</p>
-        </section>
-
-        <!-- 6. TECH STACK (Wide height or small footer card) -->
-        <section class="glass-panel tech-card">
-            <h3>Powered by</h3>
-            <div class="tech-icons">
-                <span title="Electron"><i class="ri-code-s-slash-line"></i> Electron</span>
-                <span title="React"><i class="ri-reactjs-line"></i> React</span>
-                <span title="Node.js"><i class="ri-server-line"></i> Node</span>
+            <div class="glass-card feature-item">
+                <i class="ri-heart-pulse-fill feature-icon"></i>
+                <h3>Anti-Addiction</h3>
+                <p>Suivez votre temps de jeu et gardez le contrôle.</p>
             </div>
         </section>
+
+        <footer class="glass-card footer">
+            <p>Développé par <strong>Valentin</strong>. Non affilié à Riot Games.</p>
+        </footer>
 
     </main>
-
-    <footer class="glass-panel footer-bar">
-        <p>© 2025 SkinPicker. Développé avec <i class="ri-heart-fill text-gold"></i> pour la communauté.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
