@@ -1,9 +1,12 @@
 /* --- VARIABLES STRICTES --- */
 :root {
     --bg-color: #09090b;
-    --glass-surface: rgba(20, 20, 25, 0.6); /* Un peu plus opaque pour lisibilité */
-    --glass-border: rgba(255, 255, 255, 0.1);
+    /* UPDATE: Transparence augmentée (0.25) */
+    --glass-surface: rgba(20, 20, 25, 0.25); 
+    /* UPDATE: Bordure ajustée (0.08) */
+    --glass-border: rgba(255, 255, 255, 0.08);
     --glass-shine: rgba(255, 255, 255, 0.05);
+    
     --primary-glow: rgba(139, 92, 246, 0.4);
     
     --text-color: #f8fafc;
@@ -34,7 +37,7 @@ body::before {
     position: fixed;
     inset: 0;
     background: url("./bg-cover.png") center / cover no-repeat fixed;
-    opacity: 0.6; /* Slightly reduced for better text contrast if image is busy */
+    opacity: 0.8; 
     z-index: -2;
 }
 
@@ -60,7 +63,7 @@ body::before {
 
 .mascot img {
     display: block;
-    max-width: 180px; /* Slightly larger for presence */
+    max-width: 180px;
     height: auto;
     opacity: 0.9;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
@@ -90,7 +93,7 @@ body::before {
 
 .main-container {
     width: 100%;
-    max-width: 1000px; /* Slightly tighter for focus */
+    max-width: 1000px;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -109,6 +112,7 @@ body::before {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 /* Shine Effect on top */
@@ -118,6 +122,14 @@ body::before {
     top: 0; left: 0; right: 0;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--glass-shine), transparent);
+    pointer-events: none;
+}
+
+/* UPDATE: Hover Effects for Interactive Cards */
+.feature-item:hover, .install-section:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(20, 20, 25, 0.35); /* Slightly more opaque on hover */
 }
 
 /* --- HERO SECTION --- */
@@ -157,6 +169,8 @@ h1 {
     max-width: 500px;
     margin-bottom: 2.5rem;
     line-height: 1.6;
+    /* Ensure readability with transparent bg */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .cta-group {
@@ -194,6 +208,8 @@ h1 {
 .btn-secondary {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-color);
+    /* For readability on glass */
+    backdrop-filter: blur(4px); 
     border: 1px solid var(--glass-border);
 }
 
@@ -230,15 +246,15 @@ h1 {
 }
 
 .step-card {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.3); /* Darker for better contrast inside glass */
     border-radius: 8px;
     padding: 1rem;
     border: 1px solid var(--glass-border);
 }
 
 .step-card.highlight {
-    background: rgba(139, 92, 246, 0.1);
-    border-color: rgba(139, 92, 246, 0.2);
+    background: rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.3);
 }
 
 .step-num {
@@ -246,7 +262,7 @@ h1 {
     font-weight: 700;
     color: var(--accent);
     margin-bottom: 0.5rem;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .step-card p {
@@ -258,7 +274,8 @@ h1 {
 /* --- FEATURES GRID --- */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* UPDATE: 2 colonnes seulement */
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--card-gap);
 }
 
@@ -288,23 +305,46 @@ h1 {
     line-height: 1.5;
 }
 
+/* --- FOOTER --- */
 .footer {
     text-align: center;
-    padding: 1.5rem;
-    font-size: 0.85rem;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.legal-text {
+    font-size: 0.75rem;
+    color: #6b7280; /* Gris demandé */
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0;
+}
+
+.footer-links a {
     color: var(--text-muted);
+    font-size: 0.85rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .steps-grid, .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack features on mobile */
     }
 
     h1 { font-size: 2.5rem; }
     
     .mascot {
-        opacity: 0.4; /* Diminuer l'opacité sur mobile pour ne pas gêner */
+        opacity: 0.4;
         transform: scale(0.7);
     }
     

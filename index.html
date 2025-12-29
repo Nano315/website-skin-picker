@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkinPicker - Companion App</title>
-    <meta name="description" content="SkinPicker : Le compagnon ultime pour League of Legends. Randomizer, Sync Lobby et plus.">
+    <title>SkinPicker - Randomiseur de Skins & Sync pour League of Legends</title>
+    <meta name="description" content="Ne perdez plus de temps à choisir votre skin ! SkinPicker sélectionne un skin aléatoire pour vous et se synchronise avec vos amis durant la draft. Gratuit, Open-Source et compatible Windows.">
+    <meta name="keywords" content="League of Legends, LoL, Skin Randomizer, Draft Tool, Skin Sync, Application LoL, Open Source">
+    <meta name="author" content="Nano315">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Discord / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SkinPicker - Pimentez vos drafts LoL">
+    <meta property="og:description" content="L'outil gratuit pour randomiser vos skins et se synchroniser entre amis. Téléchargement direct sans pub.">
+    <meta property="og:image" content="./bg-cover.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SkinPicker - Pimentez vos drafts LoL">
+    <meta name="twitter:description" content="L'outil gratuit pour randomiser vos skins et se synchroniser entre amis. Téléchargement direct sans pub.">
+    <meta name="twitter:image" content="./bg-cover.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./icon.ico" type="image/x-icon">
     
     <!-- Fonts: Inter Only -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,20 +33,18 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
 </head>
 <body>
 
     <!-- Floating Mascots -->
     <div class="mascot mascot-lulu">
-        <img src="mascots/LuluHome.png" alt="Lulu Mascot">
+        <img src="mascots/LuluHome.png" alt="Mascotte Lulu League of Legends">
     </div>
     <div class="mascot mascot-meep">
-        <img src="mascots/Meep3.png" alt="Meep Mascot">
+        <img src="mascots/Meep3.png" alt="Mascotte Meep League of Legends">
     </div>
     <div class="mascot mascot-poro">
-        <img src="mascots/Poro4.png" alt="Poro Mascot">
+        <img src="mascots/Poro4.png" alt="Mascotte Poro League of Legends">
     </div>
 
     <!-- Main Container -->
@@ -42,11 +58,11 @@
                 <p class="subtitle">Votre compagnon de draft intelligent. Synchronisez vos skins, gérez votre collection.</p>
                 
                 <div class="cta-group">
-                    <a href="#" id="download-btn" class="btn-primary">
+                    <a href="#" id="download-btn" class="btn-primary" title="Télécharger SkinPicker pour Windows" aria-label="Télécharger SkinPicker pour Windows">
                         <i class="ri-download-cloud-2-fill"></i>
                         <span>Télécharger pour Windows <small id="version-tag">...</small></span>
                     </a>
-                    <a href="https://github.com/nano315/lol-skin-picker" target="_blank" class="btn-secondary">
+                    <a href="https://github.com/nano315/lol-skin-picker" target="_blank" class="btn-secondary" aria-label="Voir le projet sur GitHub">
                         <i class="ri-github-fill"></i> GitHub
                     </a>
                 </div>
@@ -88,19 +104,20 @@
                 <h3>Sync Lobby</h3>
                 <p>Synchronisez votre thème de skin avec vos amis en temps réel.</p>
             </div>
-            <div class="glass-card feature-item">
-                <i class="ri-heart-pulse-fill feature-icon"></i>
-                <h3>Anti-Addiction</h3>
-                <p>Suivez votre temps de jeu et gardez le contrôle.</p>
-            </div>
         </section>
 
+        <!-- Legal Footer -->
         <footer class="glass-card footer">
-            <p>Développé par <strong>Valentin</strong>. Non affilié à Riot Games.</p>
+            <p class="legal-text">
+                SkinPicker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com/nano315/lol-skin-picker" target="_blank">View on GitHub</a>
+            </div>
         </footer>
 
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
