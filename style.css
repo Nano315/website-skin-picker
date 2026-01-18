@@ -158,6 +158,7 @@ h1 {
     font-weight: 800;
     margin: 0 0 1rem 0;
     background: linear-gradient(to bottom, #fff, #cbd5e1);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
@@ -222,6 +223,89 @@ h1 {
     font-size: 0.7rem;
     font-weight: 400;
     opacity: 0.8;
+}
+
+
+/* --- DEVELOPMENT NOTICE --- */
+.dev-notice {
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.1), transparent);
+}
+
+.dev-notice .notice-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.dev-notice .icon-wrapper {
+    background: rgba(139, 92, 246, 0.2);
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.dev-notice .icon-wrapper i {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.dev-notice .notice-text h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.dev-notice .notice-text p {
+    margin: 0 0 0.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.dev-notice .contact-info {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.discord-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(88, 101, 242, 0.2);
+    color: #cad1fa;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-family: monospace;
+    border: 1px solid rgba(88, 101, 242, 0.3);
+    user-select: all;
+    cursor: text;
+    transition: background 0.2s ease;
+}
+
+.discord-tag:hover {
+    background: rgba(88, 101, 242, 0.3);
+}
+
+@media (max-width: 768px) {
+    .dev-notice .notice-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .dev-notice .contact-info {
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 /* --- INSTALL SECTION --- */
