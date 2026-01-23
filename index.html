@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-583GVN5P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'GTM-583GVN5P');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-583GVN5P');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkinPicker - Skin Randomizer & Sync for League of Legends</title>
-    <meta name="description" content="Stop wasting time choosing your skin! SkinPicker selects a random skin for you and syncs with your friends during the draft. Free, Open-Source, and Windows compatible.">
-    <meta name="keywords" content="League of Legends, LoL, Skin Randomizer, Draft Tool, Skin Sync, Application LoL, Open Source">
+    <meta name="description"
+        content="Stop wasting time choosing your skin! SkinPicker selects a random skin for you and syncs with your friends during the draft. Free, Open-Source, and Windows compatible.">
+    <meta name="keywords"
+        content="League of Legends, LoL, Skin Randomizer, Draft Tool, Skin Sync, Application LoL, Open Source">
     <meta name="author" content="Nano315">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Discord / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="SkinPicker - Spice up your LoL drafts">
-    <meta property="og:description" content="The free tool to randomize your skins and sync with friends. Direct download, no ads.">
+    <meta property="og:description"
+        content="The free tool to randomize your skins and sync with friends. Direct download, no ads.">
     <meta property="og:image" content="./bg-cover.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SkinPicker - Spice up your LoL drafts">
-    <meta name="twitter:description" content="The free tool to randomize your skins and sync with friends. Direct download, no ads.">
+    <meta name="twitter:description"
+        content="The free tool to randomize your skins and sync with friends. Direct download, no ads.">
     <meta name="twitter:image" content="./bg-cover.png">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="./icon.ico" type="image/x-icon">
-    
+
     <!-- Fonts: Inter Only -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Icons: RemixIcon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Analytics Placeholder -->
     <!-- pour que je n'oublie pas de le faire plus tard. -->
 </head>
+
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-583GVN5P" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Floating Mascots -->
     <div class="mascot mascot-lulu">
@@ -52,20 +82,22 @@
 
     <!-- Main Container -->
     <main class="main-container">
-        
+
         <!-- Header / Hero -->
         <header class="hero-section glass-card">
             <div class="hero-content">
                 <div class="badge">Open Source & Free</div>
                 <h1>SkinPicker</h1>
                 <p class="subtitle">Your smart draft companion. Sync your skins, manage your collection.</p>
-                
+
                 <div class="cta-group">
-                    <a href="#" id="download-btn" class="btn-primary" title="Download SkinPicker for Windows" aria-label="Download SkinPicker for Windows">
+                    <a href="#" id="download-btn" class="btn-primary" title="Download SkinPicker for Windows"
+                        aria-label="Download SkinPicker for Windows">
                         <i class="ri-download-cloud-2-fill"></i>
                         <span>Download for Windows <small id="version-tag">...</small></span>
                     </a>
-                    <a href="https://github.com/nano315/lol-skin-picker" target="_blank" class="btn-secondary" aria-label="View project on GitHub">
+                    <a href="https://github.com/nano315/lol-skin-picker" target="_blank" class="btn-secondary"
+                        aria-label="View project on GitHub">
                         <i class="ri-github-fill"></i> GitHub
                     </a>
                     <!-- <a href="#" class="btn-discord" aria-label="Join Community">
@@ -92,7 +124,7 @@
                 <div class="notice-text">
                     <h3>Development Version (Beta)</h3>
                     <p>
-                        This application is still young! Bugs or unexpected behaviors are possible. 
+                        This application is still young! Bugs or unexpected behaviors are possible.
                         Your feedback is valuable to improve it.
                     </p>
                     <p class="contact-info">
@@ -107,9 +139,10 @@
         <section class="install-section glass-card">
             <div class="section-header">
                 <h2><i class="ri-shield-keyhole-line"></i> Installation & Trust</h2>
-                <p>Windows Defender (SmartScreen) might show an alert because the app isn't "signed" (certificates are expensive). Here's how to proceed safely.</p>
+                <p>Windows Defender (SmartScreen) might show an alert because the app isn't "signed" (certificates are
+                    expensive). Here's how to proceed safely.</p>
             </div>
-            
+
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-num">01</div>
@@ -148,7 +181,9 @@
         <!-- Legal Footer -->
         <footer class="glass-card footer">
             <p class="legal-text">
-                SkinPicker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+                SkinPicker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or
+                anyone officially involved in producing or managing Riot Games properties. Riot Games, and all
+                associated properties are trademarks or registered trademarks of Riot Games, Inc.
             </p>
             <div class="footer-links">
                 <a href="https://github.com/nano315/lol-skin-picker" target="_blank">View on GitHub</a>
@@ -159,4 +194,5 @@
 
     <script src="script.js" defer></script>
 </body>
+
 </html>

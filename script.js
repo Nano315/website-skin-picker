@@ -10,6 +10,20 @@ const REPO_NAME = 'lol-skin-picker';
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchLatestRelease();
+
+    // GA4 Tracking for Download Button
+    const downloadBtn = document.getElementById('download-btn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', () => {
+            // Send custom event to GA4
+             if (typeof gtag === 'function') {
+                gtag('event', 'download_click', { 
+                    'event_category': 'conversion', 
+                    'event_label': 'windows_app' 
+                });
+             }
+        });
+    }
 });
 
 /**
