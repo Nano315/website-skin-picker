@@ -38,7 +38,7 @@ async function fetchLatestRelease() {
         if (data.tag_name) {
             versionSpan.textContent = `Version ${data.tag_name}`;
         } else {
-            versionSpan.textContent = "Dernière version";
+            versionSpan.textContent = "Latest version";
         }
 
         // 2. Recherche de l'asset .exe
@@ -56,7 +56,7 @@ async function fetchLatestRelease() {
     } catch (error) {
         console.error("Erreur lors du fetch GitHub:", error);
         // Fallback visuel
-        versionSpan.textContent = "Téléchargement via GitHub";
+        versionSpan.textContent = "Download via GitHub";
         // Le lien est déjà set sur defaultUrl
     }
 }
