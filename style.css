@@ -182,7 +182,7 @@ h1 {
 }
 
 /* Buttons */
-.btn-primary, .btn-secondary {
+.btn-primary, .btn-secondary, .btn-discord {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -218,6 +218,18 @@ h1 {
     background: rgba(255, 255, 255, 0.1);
 }
 
+.btn-discord {
+    background: #5865F2;
+    color: white;
+    box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+}
+
+.btn-discord:hover {
+    background: #7289da;
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(88, 101, 242, 0.6);
+}
+
 .btn-primary small {
     display: block;
     font-size: 0.7rem;
@@ -225,6 +237,28 @@ h1 {
     opacity: 0.8;
 }
 
+
+/* --- APP PREVIEW --- */
+.app-preview {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: var(--card-gap);
+}
+
+.preview-container {
+    max-width: 900px;
+    width: 100%;
+    /* Optional: glass border wrap if desired, but user asked for image shadow */
+}
+
+.app-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4); /* Stronger shadow for depth */
+    display: block;
+}
 
 /* --- DEVELOPMENT NOTICE --- */
 .dev-notice {
@@ -358,8 +392,8 @@ h1 {
 /* --- FEATURES GRID --- */
 .features-grid {
     display: grid;
-    /* UPDATE: 2 colonnes seulement */
-    grid-template-columns: repeat(2, 1fr);
+    /* UPDATE: 3 columns with auto-fit for responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--card-gap);
 }
 
